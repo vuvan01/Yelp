@@ -69,7 +69,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ParallaxiOS_SamsungCover.png" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-js-i0p">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBg-ux-CgH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBg-ux-CgH">
                                         <rect key="frame" x="8" y="186" width="359" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -80,11 +80,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="nB7-n0-39G"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-qG-7qr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-qG-7qr">
                                         <rect key="frame" x="8" y="244" width="359" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
@@ -122,7 +122,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="jcb-Hj-2WH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1T-in-Yjz">
+                                        <rect key="frame" x="8" y="327" width="359" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -136,13 +142,16 @@
                                     <constraint firstAttribute="trailing" secondItem="qIV-ft-gUc" secondAttribute="trailing" constant="8" id="HRk-Yn-3Aw"/>
                                     <constraint firstItem="qIV-ft-gUc" firstAttribute="top" secondItem="Mnb-dO-gQM" secondAttribute="bottom" constant="8" id="IuT-89-1oe"/>
                                     <constraint firstItem="Rad-32-xII" firstAttribute="centerX" secondItem="Oeg-js-i0p" secondAttribute="centerX" id="K7d-gw-MQ3"/>
-                                    <constraint firstAttribute="bottom" secondItem="qIV-ft-gUc" secondAttribute="bottom" constant="344" id="Lmf-Bb-HYQ"/>
                                     <constraint firstItem="qIV-ft-gUc" firstAttribute="leading" secondItem="KKh-0E-UsS" secondAttribute="leading" constant="8" id="Paj-U2-Z5e"/>
                                     <constraint firstItem="hBg-ux-CgH" firstAttribute="top" secondItem="Oeg-js-i0p" secondAttribute="bottom" constant="8" id="THh-UC-8Am"/>
                                     <constraint firstItem="RmC-eB-Xk3" firstAttribute="top" secondItem="hBg-ux-CgH" secondAttribute="bottom" constant="8" id="V8z-za-8Y9"/>
                                     <constraint firstItem="Mnb-dO-gQM" firstAttribute="top" secondItem="DYu-qG-7qr" secondAttribute="bottom" constant="8" id="WED-70-uOU"/>
                                     <constraint firstAttribute="trailing" secondItem="hBg-ux-CgH" secondAttribute="trailing" constant="8" id="WLe-rm-jJK"/>
+                                    <constraint firstItem="Z1T-in-Yjz" firstAttribute="leading" secondItem="KKh-0E-UsS" secondAttribute="leading" constant="8" id="bGZ-5U-n55"/>
                                     <constraint firstItem="RmC-eB-Xk3" firstAttribute="leading" secondItem="KKh-0E-UsS" secondAttribute="leading" constant="8" id="de1-gB-hOE"/>
+                                    <constraint firstItem="Z1T-in-Yjz" firstAttribute="top" secondItem="qIV-ft-gUc" secondAttribute="bottom" constant="8" id="eFB-u0-fAC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z1T-in-Yjz" secondAttribute="trailing" constant="8" id="g49-NR-dOV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z1T-in-Yjz" secondAttribute="bottom" constant="323" id="hGc-3L-43a"/>
                                     <constraint firstAttribute="trailing" secondItem="DYu-qG-7qr" secondAttribute="trailing" constant="8" id="k0A-Iw-HHJ"/>
                                     <constraint firstItem="hBg-ux-CgH" firstAttribute="leading" secondItem="KKh-0E-UsS" secondAttribute="leading" constant="8" id="oAA-UT-9YQ"/>
                                     <constraint firstItem="DYu-qG-7qr" firstAttribute="leading" secondItem="KKh-0E-UsS" secondAttribute="leading" constant="8" id="pZ1-6e-u3d"/>
@@ -167,7 +176,8 @@
                     </view>
                     <connections>
                         <outlet property="ivRestaurant" destination="Oeg-js-i0p" id="BLg-ah-vjh"/>
-                        <outlet property="lblCategory" destination="DYu-qG-7qr" id="4ME-Z5-shL"/>
+                        <outlet property="lblAddress" destination="DYu-qG-7qr" id="06X-po-7fD"/>
+                        <outlet property="lblCategory" destination="Z1T-in-Yjz" id="UsS-nS-fgv"/>
                         <outlet property="lblName" destination="hBg-ux-CgH" id="G0n-Bx-inJ"/>
                         <outlet property="lblPhone" destination="RmC-eB-Xk3" id="txI-bH-qeF"/>
                         <outlet property="lblReviewCount" destination="qIV-ft-gUc" id="LYf-VK-xqm"/>

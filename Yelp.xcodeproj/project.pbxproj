@@ -19,6 +19,9 @@
 		FF073ED11ED53B07001D84E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF073EC91ED53B07001D84E0 /* MainViewController.swift */; };
 		FF073ED21ED53B07001D84E0 /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF073ECB1ED53B07001D84E0 /* RestaurantAnnotation.swift */; };
 		FF073ED31ED53B07001D84E0 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF073ECD1ED53B07001D84E0 /* FloatRatingView.swift */; };
+		FF073ED51ED53CF5001D84E0 /* RestaurantAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF073ED41ED53CF5001D84E0 /* RestaurantAnnotationView.swift */; };
+		FF073ED71ED53D85001D84E0 /* RestaurantCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF073ED61ED53D85001D84E0 /* RestaurantCalloutView.swift */; };
+		FF073ED91ED53D8D001D84E0 /* RestaurantCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF073ED81ED53D8D001D84E0 /* RestaurantCalloutView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		FF073EC91ED53B07001D84E0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FF073ECB1ED53B07001D84E0 /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
 		FF073ECD1ED53B07001D84E0 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		FF073ED41ED53CF5001D84E0 /* RestaurantAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotationView.swift; sourceTree = "<group>"; };
+		FF073ED61ED53D85001D84E0 /* RestaurantCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCalloutView.swift; sourceTree = "<group>"; };
+		FF073ED81ED53D8D001D84E0 /* RestaurantCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCalloutView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +132,8 @@
 		FF073EC71ED53B07001D84E0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FF073EC81ED53B07001D84E0 /* DetailViewController.swift */,
 				FF073EC91ED53B07001D84E0 /* MainViewController.swift */,
+				FF073EC81ED53B07001D84E0 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				FF073ECB1ED53B07001D84E0 /* RestaurantAnnotation.swift */,
+				FF073ED41ED53CF5001D84E0 /* RestaurantAnnotationView.swift */,
+				FF073ED61ED53D85001D84E0 /* RestaurantCalloutView.swift */,
+				FF073ED81ED53D8D001D84E0 /* RestaurantCalloutView.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 			files = (
 				FF073EA81ED4247D001D84E0 /* LaunchScreen.storyboard in Resources */,
 				FF073EA51ED4247D001D84E0 /* Assets.xcassets in Resources */,
+				FF073ED91ED53D8D001D84E0 /* RestaurantCalloutView.xib in Resources */,
 				FF073EA31ED4247D001D84E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,10 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF073ED31ED53B07001D84E0 /* FloatRatingView.swift in Sources */,
+				FF073ED51ED53CF5001D84E0 /* RestaurantAnnotationView.swift in Sources */,
 				FF073ED21ED53B07001D84E0 /* RestaurantAnnotation.swift in Sources */,
 				FF073ED01ED53B07001D84E0 /* DetailViewController.swift in Sources */,
 				FF073ECE1ED53B07001D84E0 /* AppDelegate.swift in Sources */,
 				FF073ECF1ED53B07001D84E0 /* Config.swift in Sources */,
+				FF073ED71ED53D85001D84E0 /* RestaurantCalloutView.swift in Sources */,
 				FF073ED11ED53B07001D84E0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var progressView: UIActivityIndicatorView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblReviewCount: UILabel!
     @IBOutlet weak var rateView: FloatRatingView!
@@ -41,11 +42,19 @@ class DetailViewController: UIViewController {
         
         lblName.text = restaurant.name
         lblPhone.text = (restaurant.phone ?? "")
-        lblReviewCount.text = "Review Counts: \(restaurant.reviewCount)"
+        for address in restaurant.location.address{
+            lblAddress.text = address + ", " + restaurant.location.city + ", " + restaurant.location.postalCode
+            break
+        }
+        lblReviewCount.text = "\(restaurant.reviewCount) people reviews this restaurant"
         
         var categories = ""
         for category in restaurant.categories{
-            categories = categories + " " + category.name
+            categories = categories + ", " + category.name
+        }
+        if categories.characters.count > 0{
+            categories.remove(at: categories.startIndex)
+            categories.remove(at: categories.startIndex)
         }
         lblCategory.text = "Category: " + categories
         rateView.rating = Float(restaurant.rating)

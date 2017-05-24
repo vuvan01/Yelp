@@ -118,9 +118,15 @@ extension MainViewController: MKMapViewDelegate{
         let reuseId = "reuseID"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId)
         if pinView == nil{
-            pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView?.canShowCallout = true
+            pinView = RestaurantAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView?.image = #imageLiteral(resourceName: "pin")
+            (pinView as! RestaurantAnnotationView).clickDetailsAction = { [weak self] calloutView in
+                guard let ss = self else { return }
+                let detailViewController = ss.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                detailViewController.restaurant = (annotation as! RestaurantAnnotation).restaurant
+                ss.navigationController?.pushViewController(detailViewController, animated: true)
+            }
+            
             let btnInfo = UIButton(type: .detailDisclosure)
             pinView?.rightCalloutAccessoryView = btnInfo
         }
@@ -128,11 +134,21 @@ extension MainViewController: MKMapViewDelegate{
         return pinView
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        detailViewController.restaurant = (view.annotation as! RestaurantAnnotation).restaurant
-        navigationController?.pushViewController(detailViewController, animated: true)
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        // center the map to clicked restaurant
+        let pointCoordinate = view.annotation!.coordinate
+        var region = mapView.region;
+        region.center = pointCoordinate;
+        mapView.setRegion(region, animated: true)
+        
+        self.currentMapCenter = pointCoordinate
     }
+    
+//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//        let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        detailViewController.restaurant = (view.annotation as! RestaurantAnnotation).restaurant
+//        navigationController?.pushViewController(detailViewController, animated: true)
+//    }
     
 }
 
